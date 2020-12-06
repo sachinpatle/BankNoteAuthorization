@@ -1,0 +1,49 @@
+
+<html>
+<head>
+<div style="display:flex">
+  <!-- Nav tabs -->
+  <div>
+   <h4> <a href="/">home</a></h4>
+    </div>
+    <div style="margin-left:100px">
+   <h4> <a href="about">Abouts</a><h4>
+  </div>
+</div>
+<br><br><br>
+<img style="width:950px;height:200px;margin-left:100px ;margin-right:100px" src="static/download.jpg"</img>
+</div>
+        <body>
+            <div class="login">
+                <center>
+     <form action="{{url_for('predict')}}" method="POST">
+        <h1>
+            please provide following values here
+        </h1>
+        <label for="variance">Variance Value</label>
+        <input type="number" name="one" decimal="true" placeholder="Variance Value" required="true" step="any">
+        <br>
+         <br>
+        <label for="Skewness">Skewness Value</label>
+        <input type="number" name="two" decimal="true" required="true" placeholder="Skewness Value" step="any">
+        <br>
+         <br>
+        <label for="Curtosis">Curtosis Value</label>
+        <input type="number" name="three" decimal="true" required="true" placeholder="Curtosis Value" step="any">
+        <br>
+         <br>
+        <label for="Entropy">Entropy Value</label>
+        <input type="number" name="four" decimal="true" required="true" placeholder="Entropy Value" step="any">
+        <br>
+        <br>
+        <div>
+        <button type="submit">predict</button>
+            <h2>{{predicted_marks}}</h2>
+        </div>
+    </form>
+</center>
+</div>
+</body>
+</head>
+</html>
+ 
